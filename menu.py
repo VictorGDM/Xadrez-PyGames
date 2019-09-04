@@ -11,7 +11,7 @@ tcrTela ===== Troca as imagens da tela
 
 #--Variaveis de alteração--#
 pygame.init()
-size = width, height = 1000, 650
+size = width, height = 900, 550
 screen = pygame.display.set_mode(size)
 executando = True
 botao = 0
