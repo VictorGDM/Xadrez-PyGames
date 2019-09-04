@@ -6,7 +6,23 @@ pygame.init()
 Carrega as imagens utilizadas no jogo
 """
 ###-----------------------------------------------------------###
-tema = 2
+tema = 0
+
+def mdrTema(t):
+    global tema
+    tema = t
+
+    menu = pygame.image.load(f'telas/menu/menu{tema}/menu.png')
+    menu1 = pygame.image.load(f'telas/menu/menu{tema}/menuJogar.png')
+    menu2 = pygame.image.load(f'telas/menu/menu{tema}/menuInstrucoes.png')
+    menu3 = pygame.image.load(f'telas/menu/menu{tema}/menuCreditos.png')
+    menu4 = pygame.image.load(f'telas/menu/menu{tema}/menuOpcoes.png')
+    menu5 = pygame.image.load(f'telas/menu/menu{tema}/menuSair.png')
+
+    
+    pygame.display.update()
+    
+    print(f'Carregou {tema}')
 
 #--Menu_Padrão--#
 menu = pygame.image.load(f'telas/menu/menu{tema}/menu.png')
@@ -73,6 +89,7 @@ eE = pygame.image.load('telas/submenu/sair/eE.png')
 """
 # def mdrTema(t):
 #         #--Menu_Padrão--#
+        tema = t
 #         menu = pygame.image.load(f'telas/menu/menu{t}/menu.png')
 #         menu1 = pygame.image.load(f'telas/menu/menu{t}/menuJogar.png')
 #         menu2 = pygame.image.load(f'telas/menu/menu{t}/menuInstrucoes.png')
