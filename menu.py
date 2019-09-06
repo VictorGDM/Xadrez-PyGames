@@ -1,4 +1,4 @@
-import sys, pygame
+import sysconfig, pygame
 import crgImg, idtBto, tcrTela, crgSons
 
 ###-----------------------------------------------------------###
@@ -58,4 +58,4 @@ while executando == True:
     pygame.display.update()
 
 pygame.quit()
-sys.exit()
+sysconfig.exit()

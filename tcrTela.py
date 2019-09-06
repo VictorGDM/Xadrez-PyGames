@@ -1,4 +1,4 @@
-import sys, pygame
+import pygame
 import crgImg, crgSons, idtBto
 pygame.init()
 
