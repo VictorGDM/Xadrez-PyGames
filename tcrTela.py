@@ -53,6 +53,24 @@ def prxTela(c, b, t):
 
     #--Telas das Instruções--#
     if c == 2:
+        if b == 1:
+            return crgImg.instruPeao, 20
+
+        if b == 2:
+            return crgImg.instruCava, 21
+
+        if b == 3:
+            return crgImg.instruBisp, 22
+
+        if b == 4:
+            return crgImg.instruTorr, 23
+
+        if b == 5:
+            return crgImg.instruDama, 24
+
+        if b == 6:
+            return crgImg.instruRei, 25
+
         if b == 7:
             return crgImg.menu, 0
 
@@ -86,6 +104,159 @@ def prxTela(c, b, t):
 
         else:
             return crgImg.opcoes, 4, t
+
+    """------------"""
+    #--Instruções.2--#
+    """------------"""
+    if c == 20:
+        if b == 1:
+            return crgImg.instrucoes, 2
+        
+        if b == 2:
+            return crgImg.instruCava, 21
+        
+        if b == 3:
+            return crgImg.instruBisp, 22
+        
+        if b == 4:
+            return crgImg.instruTorr, 23
+        
+        if b == 5:
+            return crgImg.instruDama, 24
+
+        if b == 6:
+            return crgImg.instruRei, 25
+
+        if b == 7:
+            return crgImg.menu, 0
+        
+        else:
+            return crgImg.instruPeao, 20
+
+    if c == 21:
+        if b == 1:
+            return crgImg.instruPeao, 20
+        
+        if b == 2:
+            return crgImg.instrucoes, 2
+        
+        if b == 3:
+            return crgImg.instruBisp, 22
+        
+        if b == 4:
+            return crgImg.instruTorr, 23
+        
+        if b == 5:
+            return crgImg.instruDama, 24
+
+        if b == 6:
+            return crgImg.instruRei, 25
+
+        if b == 7:
+            return crgImg.menu, 0
+        
+        else:
+            return crgImg.instruCava, 21
+
+    if c == 22:
+        if b == 1:
+            return crgImg.instruPeao, 20
+        
+        if b == 2:
+            return crgImg.instruCava, 21
+        
+        if b == 3:
+            return crgImg.instrucoes, 2
+        
+        if b == 4:
+            return crgImg.instruTorr, 23
+        
+        if b == 5:
+            return crgImg.instruDama, 24
+
+        if b == 6:
+            return crgImg.instruRei, 25
+
+        if b == 7:
+            return crgImg.menu, 0
+        
+        else:
+            return crgImg.instruBisp, 22
+
+    if c == 23:
+        if b == 1:
+            return crgImg.instruPeao, 20
+        
+        if b == 2:
+            return crgImg.instruCava, 21
+        
+        if b == 3:
+            return crgImg.instruBisp, 22
+        
+        if b == 4:
+            return crgImg.instrucoes, 2
+        
+        if b == 5:
+            return crgImg.instruDama, 24
+
+        if b == 6:
+            return crgImg.instruRei, 25
+
+        if b == 7:
+            return crgImg.menu, 0
+        
+        else:
+            return crgImg.instruTorr, 23
+
+    if c == 24:
+        if b == 1:
+            return crgImg.instruPeao, 20
+        
+        if b == 2:
+            return crgImg.instruCava, 21
+        
+        if b == 3:
+            return crgImg.instruBisp, 22
+        
+        if b == 4:
+            return crgImg.instruTorr, 23
+        
+        if b == 5:
+            return crgImg.instrucoes, 2
+
+        if b == 6:
+            return crgImg.instruRei, 25
+
+        if b == 7:
+            return crgImg.menu, 0
+        
+        else:
+            return crgImg.instruDama, 24
+
+    if c == 25:
+        if b == 1:
+            return crgImg.instruPeao, 20
+        
+        if b == 2:
+            return crgImg.instruCava, 21
+        
+        if b == 3:
+            return crgImg.instruBisp, 22
+        
+        if b == 4:
+            return crgImg.instruTorr, 23
+        
+        if b == 5:
+            return crgImg.instruDama, 24
+
+        if b == 6:
+            return crgImg.instrucoes, 2
+
+        if b == 7:
+            return crgImg.menu, 0
+        
+        else:
+            return crgImg.instruRei, 25
 
     #--eE--#
     if c == 100:

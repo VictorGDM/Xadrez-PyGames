@@ -53,22 +53,22 @@ def btMouse(x, y, c, tela):
     #--Botões da camada Instruções--#
     if c == 2:
         if x >= 38 and x <= 126 and y >= 202 and y <= 294:
-            return crgImg.instruPeao, 1
+            return crgImg.instrucoes, 1
         
         elif x >= 206 and x <= 295 and y >= 202 and y <= 294:
-            return crgImg.instruCava, 2
+            return crgImg.instrucoes, 2
 
         elif x >= 374 and x <= 464 and y >= 202 and y <= 294:
-            return crgImg.instruBisp, 3
+            return crgImg.instrucoes, 3
 
         elif x >= 540 and x <= 630 and y >= 202 and y <= 294:
-            return crgImg.instruTorr, 4
+            return crgImg.instrucoes, 4
 
         elif x >= 708 and x <= 798 and y >= 202 and y <= 294:
-            return crgImg.instruDama, 5
+            return crgImg.instrucoes, 5
 
         elif x >= 878 and x <= 966 and y >= 202 and y <= 294:
-            return crgImg.instruRei, 6
+            return crgImg.instrucoes, 6
         
         elif x >= 861 and x <= 986 and y >= 591 and y <= 621:
             return crgImg.instruVolt, 7
@@ -102,6 +102,159 @@ def btMouse(x, y, c, tela):
 
         else:
             return crgImg.opcoes, 0
+
+    """------------"""
+    #--Instruções.2--#
+    """------------"""
+    if c == 20:
+        if x >= 38 and x <= 126 and y >= 202 and y <= 294:
+            return crgImg.instruPeao, 1
+        
+        elif x >= 206 and x <= 295 and y >= 202 and y <= 294:
+            return crgImg.instruPeao, 2
+
+        elif x >= 374 and x <= 464 and y >= 202 and y <= 294:
+            return crgImg.instruPeao, 3
+
+        elif x >= 540 and x <= 630 and y >= 202 and y <= 294:
+            return crgImg.instruPeao, 4
+
+        elif x >= 708 and x <= 798 and y >= 202 and y <= 294:
+            return crgImg.instruPeao, 5
+
+        elif x >= 878 and x <= 966 and y >= 202 and y <= 294:
+            return crgImg.instruPeao, 6
+        
+        elif x >= 861 and x <= 986 and y >= 591 and y <= 621:
+            return crgImg.instruPeaoVolt, 7
+
+        else:
+            return crgImg.instruPeao, 0
+
+    if c == 21:
+        if x >= 38 and x <= 126 and y >= 202 and y <= 294:
+            return crgImg.instruCava, 1
+        
+        elif x >= 206 and x <= 295 and y >= 202 and y <= 294:
+            return crgImg.instruCava, 2
+
+        elif x >= 374 and x <= 464 and y >= 202 and y <= 294:
+            return crgImg.instruCava, 3
+
+        elif x >= 540 and x <= 630 and y >= 202 and y <= 294:
+            return crgImg.instruCava, 4
+
+        elif x >= 708 and x <= 798 and y >= 202 and y <= 294:
+            return crgImg.instruCava, 5
+
+        elif x >= 878 and x <= 966 and y >= 202 and y <= 294:
+            return crgImg.instruCava, 6
+        
+        elif x >= 861 and x <= 986 and y >= 591 and y <= 621:
+            return crgImg.instruCavaVolt, 7
+
+        else:
+            return crgImg.instruCava, 0
+
+    if c == 22:
+        if x >= 38 and x <= 126 and y >= 202 and y <= 294:
+            return crgImg.instruBisp, 1
+        
+        elif x >= 206 and x <= 295 and y >= 202 and y <= 294:
+            return crgImg.instruBisp, 2
+
+        elif x >= 374 and x <= 464 and y >= 202 and y <= 294:
+            return crgImg.instruBisp, 3
+
+        elif x >= 540 and x <= 630 and y >= 202 and y <= 294:
+            return crgImg.instruBisp, 4
+
+        elif x >= 708 and x <= 798 and y >= 202 and y <= 294:
+            return crgImg.instruBisp, 5
+
+        elif x >= 878 and x <= 966 and y >= 202 and y <= 294:
+            return crgImg.instruBisp, 6
+        
+        elif x >= 861 and x <= 986 and y >= 591 and y <= 621:
+            return crgImg.instruBispVolt, 7
+
+        else:
+            return crgImg.instruBisp, 0
+
+    if c == 23:
+        if x >= 38 and x <= 126 and y >= 202 and y <= 294:
+            return crgImg.instruTorr, 1
+        
+        elif x >= 206 and x <= 295 and y >= 202 and y <= 294:
+            return crgImg.instruTorr, 2
+
+        elif x >= 374 and x <= 464 and y >= 202 and y <= 294:
+            return crgImg.instruTorr, 3
+
+        elif x >= 540 and x <= 630 and y >= 202 and y <= 294:
+            return crgImg.instruTorr, 4
+
+        elif x >= 708 and x <= 798 and y >= 202 and y <= 294:
+            return crgImg.instruTorr, 5
+
+        elif x >= 878 and x <= 966 and y >= 202 and y <= 294:
+            return crgImg.instruTorr, 6
+        
+        elif x >= 861 and x <= 986 and y >= 591 and y <= 621:
+            return crgImg.instruTorrVolt, 7
+
+        else:
+            return crgImg.instruTorr, 0
+
+    if c == 24:
+        if x >= 38 and x <= 126 and y >= 202 and y <= 294:
+            return crgImg.instruDama, 1
+        
+        elif x >= 206 and x <= 295 and y >= 202 and y <= 294:
+            return crgImg.instruDama, 2
+
+        elif x >= 374 and x <= 464 and y >= 202 and y <= 294:
+            return crgImg.instruDama, 3
+
+        elif x >= 540 and x <= 630 and y >= 202 and y <= 294:
+            return crgImg.instruDama, 4
+
+        elif x >= 708 and x <= 798 and y >= 202 and y <= 294:
+            return crgImg.instruDama, 5
+
+        elif x >= 878 and x <= 966 and y >= 202 and y <= 294:
+            return crgImg.instruDama, 6
+        
+        elif x >= 861 and x <= 986 and y >= 591 and y <= 621:
+            return crgImg.instruDamaVolt, 7
+
+        else:
+            return crgImg.instruDama, 0
+
+    if c == 25:
+        if x >= 38 and x <= 126 and y >= 202 and y <= 294:
+            return crgImg.instruRei, 1
+        
+        elif x >= 206 and x <= 295 and y >= 202 and y <= 294:
+            return crgImg.instruRei, 2
+
+        elif x >= 374 and x <= 464 and y >= 202 and y <= 294:
+            return crgImg.instruRei, 3
+
+        elif x >= 540 and x <= 630 and y >= 202 and y <= 294:
+            return crgImg.instruRei, 4
+
+        elif x >= 708 and x <= 798 and y >= 202 and y <= 294:
+            return crgImg.instruRei, 5
+
+        elif x >= 878 and x <= 966 and y >= 202 and y <= 294:
+            return crgImg.instruRei, 6
+        
+        elif x >= 861 and x <= 986 and y >= 591 and y <= 621:
+            return crgImg.instruReiVolt, 7
+
+        else:
+            return crgImg.instruRei, 0
 
     #--eE--#
     if c == 100:

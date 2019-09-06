@@ -21,7 +21,7 @@ tema = 0
 #--Telas do jogo--#
 pygame.display.set_caption('Xadrez')
 camada = 0
-crgImg.mdrTema(tema)
+# crgImg.mdrTema(tema)
 tela = crgImg.menu
 # screen.blit(tela, (0,0))
 
@@ -29,7 +29,6 @@ tela = crgImg.menu
 while executando == True:
     x, y = pygame.mouse.get_pos()
     tela, botao = idtBto.btMouse(x, y, camada, tela)
-    crgImg.mdrTema(tema)
 
     #--Controlar os eventos--#
     for event in pygame.event.get():
@@ -49,7 +48,7 @@ while executando == True:
                 
     # pygame.time.delay(1000)
     # relogio.tick(10)
-    print(f'{x} {y} {botao} {tema}')
+    print(f'x:{x} y:{y} b:{botao} t:{tema} c:{camada}')
 
     # redim = pygame.transform.smoothscale(tela, size)
     screen.blit(tela, (0,0))
