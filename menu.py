@@ -1,5 +1,5 @@
 import sys, pygame
-import crgImg, idtBto, tcrTela
+import crgImg, idtBto, tcrTela, crgSons
 
 ###-----------------------------------------------------------###
 """
@@ -15,6 +15,8 @@ size = width, height = 1000, 650
 screen = pygame.display.set_mode(size)
 # relogio = pygame.time.Clock()
 executando = True
+tSom = 0
+som = crgSons.mdrSom(tSom)
 botao = 0
 tema = 0
 
@@ -28,7 +30,8 @@ tela = crgImg.menu
 #--Jogo em execução--#
 while executando == True:
     x, y = pygame.mouse.get_pos()
-    tela, botao = idtBto.btMouse(x, y, camada, tela)
+    crgSons.mdrSom(tSom)
+    tela, botao, tSom = idtBto.btMouse(x, y, camada, tela)
 
     #--Controlar os eventos--#
     for event in pygame.event.get():
@@ -38,17 +41,17 @@ while executando == True:
         
         if event.type == pygame.MOUSEBUTTONUP:
             if camada == 4:
-                tela, camada, tema = tcrTela.prxTela(camada, botao, tema)
+                tela, camada, tema = tcrTela.prxTela(camada, botao, tema, tSom)
 
             elif camada == 0 and botao == 5:
-                executando = tcrTela.prxTela(camada, botao, tema)
+                executando = tcrTela.prxTela(camada, botao, tema, tSom)
 
             else:
-                tela, camada = tcrTela.prxTela(camada, botao, tema)                
+                tela, camada = tcrTela.prxTela(camada, botao, tema, tSom)                
                 
     # pygame.time.delay(1000)
     # relogio.tick(10)
-    print(f'x:{x} y:{y} b:{botao} t:{tema} c:{camada}')
+    print(f'x:{x} y:{y} b:{botao} t:{tema} c:{camada} tS:{tSom}')
 
     # redim = pygame.transform.smoothscale(tela, size)
     screen.blit(tela, (0,0))

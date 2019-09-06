@@ -6,7 +6,7 @@ pygame.init()
 Carrega as imagens utilizadas no jogo
 """
 ###-----------------------------------------------------------###
-tema = 1
+tema = 0
 
 #--Menu--#
 menu = pygame.image.load(f'telas/menu/menu{tema}/menu.png')
