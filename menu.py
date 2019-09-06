@@ -23,13 +23,14 @@ tema = 0
 #--Telas do jogo--#
 pygame.display.set_caption('Xadrez')
 camada = 0
-# crgImg.mdrTema(tema)
+crgImg.mdrTema(tema)
 tela = crgImg.menu
 # screen.blit(tela, (0,0))
 
 #--Jogo em execução--#
 while executando == True:
     x, y = pygame.mouse.get_pos()
+    crgImg.mdrTema(tema)
     crgSons.mdrSom(tSom)
     tela, botao, tSom = idtBto.btMouse(x, y, camada, tela)
 
