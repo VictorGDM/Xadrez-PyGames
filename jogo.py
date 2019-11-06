@@ -22,11 +22,14 @@ while jogoExecutando == True:
 
     moverPeca = xadrez.moverPeca(linhaOrigem, colunaOrigem, linhaDestino, colunaDestino)
     
-    if moverPeca == 2:
-        print(f"ERRO: Peça não pode ser movida deste jeito")
+    if moverPeca == 0:
+        print("ERRO: Coordenadas inválidas")
 
-    elif moverPeca == 0:
-        print(f"ERRO: Coordenadas inválidas")
+    elif moverPeca == 2:
+        print("ERRO: Peça não pode ser movida deste jeito")
+
+    elif moverPeca == 3:
+        print("ERRO: Existe uma peça da mesma cor na posição escolhida")
 
     tabuleiro = xadrez.pegarTabuleiro()
     desenharTabuleiro.pintarTelaTexto(tabuleiro)

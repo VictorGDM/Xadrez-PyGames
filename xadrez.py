@@ -13,6 +13,9 @@ tabuleiro = [
     ['tb', 'cb', 'bb', 'db', 'rb', 'bb', 'cb', 'tb']
 ]
 
+pecasPretas = ['tp', 'cp', 'bp', 'dp', 'rp', 'pp']
+pecasBrancas = ['tb', 'cb', 'bb', 'db', 'rb', 'pb']
+
 def pegarTabuleiro():
     return tabuleiro
 
@@ -57,6 +60,18 @@ def moverPeca(linhaOrigem, colunaOrigem, linhaDestino, colunaDestino):
         if (peca == "rp" or peca == "rb") and (
             (deslocVertical >= 0 and deslocVertical <= 1) and (deslocHorizontal >= 0 and deslocHorizontal <= 1)):
             mover = True
+
+        if (peca in pecasPretas) and (tabuleiro[linhaDestino][colunaDestino] in pecasBrancas):
+            mover = True
+        
+        else:
+            return 3
+
+        if (peca in pecasBrancas) and (tabuleiro[linhaDestino][colunaDestino] in pecasPretas):
+            mover = True
+        
+        else:
+            return 3
 
         if mover == True:
             tabuleiro[linhaDestino][colunaDestino] = tabuleiro[linhaOrigem][colunaOrigem]

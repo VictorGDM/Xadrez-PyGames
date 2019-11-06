@@ -18,5 +18,3 @@ def pintarTelaTexto(tabuleiro):
                 else:
                     print(f"  {letra}  ", end="")
             print()
-        
-
