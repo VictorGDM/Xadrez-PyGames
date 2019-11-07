@@ -16,8 +16,34 @@ tabuleiro = [
 pecasPretas = ['tp', 'cp', 'bp', 'dp', 'rp', 'pp']
 pecasBrancas = ['tb', 'cb', 'bb', 'db', 'rb', 'pb']
 
-def pegarTabuleiro():
-    return tabuleiro
+def peaoComerPeca(linhaOrigem, colunaOrigem):
+    comer = False
+    peca : str
+
+    peca = tabuleiro[linhaOrigem][colunaOrigem]
+
+    linhaAdjacente = (linhaOrigem + 1) if (peca == "pp") else (linhaOrigem - 1)
+    adjacenteEsquerdo: colunaOrigem - 1
+    adjacenteDireito: colunaOrigem + 1
+    
+    if (peca == "pp"):
+        if (tabuleiro[linhaAdjacente][adjacenteDireito] in pecasBrancas) or (tabuleiro[linhaAdjacente][adjacenteEsquerdo] in pecasBrancas):
+            comer = True
+        else:
+            return comer
+
+    elif (peca == "pb"):
+        if (tabuleiro[linhaAdjacente][adjacenteDireito] in pecasBrancas) or (tabuleiro[linhaAdjacente][adjacenteEsquerdo] in pecasBrancas):
+            comer = True
+        else:
+            return comer
+
+    else:
+        return comer
+
+
+    
+
 
 def moverPeca(linhaOrigem, colunaOrigem, linhaDestino, colunaDestino):
     mover = False
