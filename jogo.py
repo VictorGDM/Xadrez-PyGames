@@ -8,6 +8,8 @@ tabuleiro = xadrez.pegarTabuleiro()
 desenharTabuleiro.pintarTelaTexto(tabuleiro)
 
 while jogoExecutando == True:
+    desenharTabuleiro.pintarTelaGrafica(tabuleiro)
+
     linhaOrigem : int
     linhaDestino : int
     colunaOrigem : int
