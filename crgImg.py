@@ -42,6 +42,22 @@ opcoesVoltar = pygame.image.load('telas/submenu/opcoes/opcao0/opcaoVoltar.png')
 #--Jogo--#
 jogo = pygame.image.load('telas/jogo/jogo0/jogo.png')
 jogo1 = pygame.image.load('telas/jogo/jogo0/jogoSair.png')
+select = pygame.image.load('telas/jogo/pecas/sq.png')
+
+#--Peças--#
+pp = pygame.image.load('telas/jogo/pecas/pp.png')
+pb = pygame.image.load('telas/jogo/pecas/pb.png')
+bp = pygame.image.load('telas/jogo/pecas/bp.png')
+bb = pygame.image.load('telas/jogo/pecas/bb.png')
+cp = pygame.image.load('telas/jogo/pecas/cp.png')
+cb = pygame.image.load('telas/jogo/pecas/cb.png')
+tp = pygame.image.load('telas/jogo/pecas/tp.png')
+tb = pygame.image.load('telas/jogo/pecas/tb.png')
+dp = pygame.image.load('telas/jogo/pecas/dp.png')
+db = pygame.image.load('telas/jogo/pecas/db.png')
+rp = pygame.image.load('telas/jogo/pecas/rp.png')
+rb = pygame.image.load('telas/jogo/pecas/rb.png')
+
 
 
 def mdrTema(t):

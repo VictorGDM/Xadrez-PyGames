@@ -16,9 +16,29 @@ tabuleiro = [
 pecasPretas = ['tp', 'cp', 'bp', 'dp', 'rp', 'pp']
 pecasBrancas = ['tb', 'cb', 'bb', 'db', 'rb', 'pb']
 
+
 def pegarTabuleiro():
     return tabuleiro
-    
+
+
+# def pecaDoMesmoTime(linhaOrigem, colunaOrigem, linhaDestino, colunaDestino):
+#     peca = tabuleiro[linhaOrigem][colunaOrigem]
+#     eDoTime = True
+
+#     if (peca in pecasPretas) and (tabuleiro[linhaDestino][colunaDestino] in pecasBrancas):
+#         eDoTime = False
+#         return eDoTime
+
+#     if (peca in pecasBrancas) and (tabuleiro[linhaDestino][colunaDestino] in pecasPretas):
+#         eDoTime = False
+#         return eDoTime
+
+#     if ((peca in pecasPretas) or (peca in pecasBrancas)) and (tabuleiro[linhaDestino][colunaDestino] == " "):
+#         eDoTime = False
+#         return eDoTime
+        
+#     return eDoTime
+
 
 def peaoComerPeca(linhaOrigem, colunaOrigem):
     comer = False
@@ -57,6 +77,8 @@ def moverPeca(linhaOrigem, colunaOrigem, linhaDestino, colunaDestino):
         linhaOrigem >= 0 and linhaOrigem < 8 and colunaOrigem >= 0 and colunaOrigem < 8
     ) and (
         linhaDestino >= 0 and linhaDestino < 8 and colunaDestino >= 0 and colunaDestino < 8
+    ) and (
+        deslocVertical + deslocHorizontal > 0
     ):
         peca = tabuleiro[linhaOrigem][colunaOrigem]
 
@@ -87,18 +109,6 @@ def moverPeca(linhaOrigem, colunaOrigem, linhaDestino, colunaDestino):
         if (peca == "rp" or peca == "rb") and (
             (deslocVertical >= 0 and deslocVertical <= 1) and (deslocHorizontal >= 0 and deslocHorizontal <= 1)):
             mover = True
-
-        if (peca in pecasPretas) and (tabuleiro[linhaDestino][colunaDestino] in pecasBrancas):
-            mover = True
-        
-        else:
-            return 3
-
-        if (peca in pecasBrancas) and (tabuleiro[linhaDestino][colunaDestino] in pecasPretas):
-            mover = True
-        
-        else:
-            return 3
 
         if mover == True:
             tabuleiro[linhaDestino][colunaDestino] = tabuleiro[linhaOrigem][colunaOrigem]

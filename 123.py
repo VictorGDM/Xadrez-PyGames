@@ -21,7 +21,7 @@ pygame.display.set_caption('Olá mundo')
 screen.fill(BLACK)
 
 # desenhando na superfície 
-pygame.draw.rect(screen, BLUE, [0, 0, 40, 40])
+pygame.draw.rect(screen, BLUE, [100, 100, 40, 40])
 
 # atualizando a tela
 pygame.display.flip()
