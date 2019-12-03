@@ -13,6 +13,15 @@ def updateScreen(tela):
     screen.blit(tela, (0, 0))
     pygame.display.update()
 
+
+def sonMenu():
+    pygame.mixer.music.load('sons/menu/menu.mp3')
+    pygame.mixer.music.play()
+
+
+def sonMenuCancel():
+    pygame.mixer.music.stop()
+
 #--Variaveis de alteração--#
 pygame.init()
 size = width, height = 1000, 650
@@ -31,6 +40,9 @@ updateScreen(tela)
 
 #--Jogo em execução--#
 while executando == True:
+    if (menuJogo == 1):
+        sonMenu()
+
     while menuJogo == 1:
         x, y = pygame.mouse.get_pos()
 
@@ -56,6 +68,7 @@ while executando == True:
                     executando = tcrTela.prxTela(camada, botao, tema)
 
                 elif camada == 1:
+                    sonMenuCancel()
                     menuJogo = 2
 
                 else:

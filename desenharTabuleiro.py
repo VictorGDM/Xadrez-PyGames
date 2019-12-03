@@ -10,6 +10,10 @@ alturaTabuleiro = 592
 linhaOrigem = -1
 colunaOrigem = -1
 
+def sonClick():
+    pygame.mixer.music.load('sons/click/click.mp3')
+    pygame.mixer.music.play()
+
 def capturarEvento():
     global linhaOrigem, colunaOrigem
     objPeca = pecas.criarPeca()
@@ -23,6 +27,7 @@ def capturarEvento():
             sys.exit()
 
         elif evento.type == pygame.MOUSEBUTTONDOWN:
+            sonClick()
             x, y = pygame.mouse.get_pos()
             x -= 204
             y -= 30
