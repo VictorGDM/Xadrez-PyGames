@@ -13,11 +13,9 @@ def updateScreen(tela):
     screen.blit(tela, (0, 0))
     pygame.display.update()
 
-
 def sonMenu():
     pygame.mixer.music.load('sons/menu/menu.mp3')
     pygame.mixer.music.play()
-
 
 def sonMenuCancel():
     pygame.mixer.music.stop()
@@ -30,6 +28,7 @@ executando = True
 menuJogo = 1
 botao = 0
 tema = 0
+musica = False
 
 #--Telas do jogo--#
 pygame.display.set_caption('Xadrez')
@@ -40,10 +39,11 @@ updateScreen(tela)
 
 #--Jogo em execução--#
 while executando == True:
-    if (menuJogo == 1):
-        sonMenu()
-
     while menuJogo == 1:
+        musica = pygame.mixer.music.get_busy()
+        if (musica == False):
+            sonMenu()
+
         x, y = pygame.mouse.get_pos()
 
         #--Controlar os eventos--#

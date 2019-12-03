@@ -14,6 +14,19 @@ def sonClick():
     pygame.mixer.music.load('sons/click/click.mp3')
     pygame.mixer.music.play()
 
+def cavalo():
+    pygame.mixer.music.load('sons/cavalo/cavalo.mp3')
+    pygame.mixer.music.play()
+
+def bispo():
+    pygame.mixer.music.load('sons/bispo/bispo.mp3')
+    pygame.mixer.music.play()
+
+def torre():
+    pygame.mixer.music.load('sons/torre/torre.mp3')
+    pygame.mixer.music.play()
+
+
 def capturarEvento():
     global linhaOrigem, colunaOrigem
     objPeca = pecas.criarPeca()
